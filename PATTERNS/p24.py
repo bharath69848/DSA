@@ -1,5 +1,5 @@
 #Combine Both the p-7 and p-8
-n = 12
+n = 4
 n1,n2 = 0,0
 letter = 65
 
@@ -37,4 +37,24 @@ for i in range(n2-1,-1,-1):
     for s2 in range(spaces):
         print(" ",end=" ")
     letter+=1
+    print()
+
+#method2
+n = 4
+letter = 65
+for i in range(n):
+    if n % 2 == 0:
+        mid = (n - 1) / 2
+    else:
+        mid = n // 2
+
+    start = int(abs(mid - i))
+    end = int((n - 1) - abs(mid - i))
+
+    for j in range(n):
+        if j == start or j == end:
+            print(chr(letter), end=" ")
+        else:
+            print(" ", end=" ")
+    letter += 1
     print()
