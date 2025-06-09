@@ -18,10 +18,12 @@ print(res)
 res2 = []
 i,j = 0,0
 while i<len(num1):
-    if num1[i] == num2[j]:
+    if num1[i] > num2[j]:
+        j += 1
+    elif num1[i] < num2[j]:
+        i+=1
+    else:
         res2.append(num1[i])
         i += 1
         j += 1
-    else:
-        i+=1
 print(res2)
